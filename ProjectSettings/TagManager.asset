@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  - Boss
+  - FinalBoss
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3219684311
+    locked: 0
+  - name: BackGround
+    uniqueID: 687587843
+    locked: 0
+  - name: Ground
+    uniqueID: 1040996839
+    locked: 0
+  - name: Object
+    uniqueID: 2286980015
+    locked: 0
+  - name: Object1
+    uniqueID: 4078597885
+    locked: 0
+  - name: Object2
+    uniqueID: 2567888363
+    locked: 0
+  - name: Player
+    uniqueID: 1107949291
+    locked: 0
+  - name: Button
+    uniqueID: 3835289697
+    locked: 0
+  - name: Shoot
+    uniqueID: 4055797649
+    locked: 0
