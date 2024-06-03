@@ -21,6 +21,10 @@ public class EnemyLeft : MonoBehaviour
             Debug.LogError("Text component is missing. Please attach a Text component to the GameObject.");
         }
         StartCoroutine(UpdateEnemyCountRoutine());
+        if(!DataPersistenceManager.instance.HasGameData())
+        {
+                Debug.Log("No saved game data found.");
+        }
     }
 
     // Update is called once per frame
@@ -31,8 +35,9 @@ public class EnemyLeft : MonoBehaviour
         if (enemyNumber <= 0)
         {
             DataPersistenceManager.instance.SaveGame();
+    
             SceneManager.LoadScene(sceneName);
-            
+
         }
     }
     void Update()
@@ -59,20 +64,17 @@ public class EnemyLeft : MonoBehaviour
     {
         int enemyCountWithTag = CountEnemiesWithTag("Enemy");
         enemyNumber = Mathf.Max(enemyNumber, enemyCountWithTag);
-
+        
         if (enemyNumber <= 0)
-        {
+        {   
             DataPersistenceManager.instance.SaveGame();
+
             // Invoke("LoadSceneAfterDelay", 2f); // Gọi hàm sau 2 giây
             SceneManager.LoadScene(sceneName);
         }
 
         enemyText.text = "Enemy Left: " + enemyNumber;
     }
-    // private void LoadSceneAfterDelay()
-    // {
-    //     SceneManager.LoadScene(sceneName);
-    // }
 }
 
 

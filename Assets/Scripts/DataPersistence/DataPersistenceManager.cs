@@ -49,6 +49,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         // Debug.Log("OnSceneLoaded called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+      
         LoadGame();
     }
     public void OnSceneUnloaded(Scene scene)
@@ -62,19 +63,14 @@ public class DataPersistenceManager : MonoBehaviour
         // Giả sử GameData là một class hoặc struct hợp lệ
         this.gameData = new GameData();
     }
-    public void ResetPosition()
+    public void DefautPosition()
     {
-        this.gameData.playerPosition = Vector3.zero;
-    }
-    public void ResetPlayerData()
-    {
-        if (gameData != null)
-        {
-            gameData.score = 0;
-            gameData.health = 1000;
-            gameData.playerPosition = Vector3.zero;
-            Debug.Log("Đã tải vector = " + gameData.playerPosition + " từ dữ liệu đã lưu"); 
-        }
+        // Tạo một phiên bản mới của GameData
+        this.gameData = new GameData();
+        // Gán giá trị cho x và y
+        this.gameData.x = 0.0f;
+        this.gameData.y = 0.0f;
+        Debug.Log("Default positon");
     }
     public void LoadGame()
     {
@@ -98,7 +94,9 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObject.LoadData(this.gameData);
         }
-        // Debug.Log("Đã tải điểm số = " + gameData.score + " từ dữ liệu đã lưu");  // Đã sửa dấu ngoặc kép
+        Debug.Log("Đã tải x = " + gameData.x+ " từ dữ liệu đã lưu");  // Đã sửa dấu ngoặc kép
+        Debug.Log("Đã tải y = " + gameData.y+ " từ dữ liệu đã lưu");  // Đã sửa dấu ngoặc kép
+
     
     }
 
@@ -116,11 +114,41 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObject.SaveData(ref this.gameData);
         }
         // Debug.Log("Đã lưu điểm số = " + gameData.score + " vào dữ liệu đã lưu");  // Đã sửa dấu ngoặc kép
-        // Debug.Log("Đã lưu trạng thái = "+ gameData.enemiesKilled+ " vào dữ liệu đã lưu");
         // TODO - Lưu dữ liệu vào tệp bằng cách sử dụng trình xử lý dữ liệu
+           Debug.Log("Đã lưu X = " + gameData.x+ " vào dữ liệu đã lưu"); 
+            Debug.Log("Đã lưu Y = " + gameData.y + " vào dữ liệu đã lưu"); 
         dataHandler.Save(this.gameData);
         string saveFilePath = System.IO.Path.Combine(Application.persistentDataPath, fileName);
         Debug.Log("Đã lưu dữ liệu vào tệp: " + saveFilePath);
+    }
+    public void SaveDefaultPosition()
+    {
+        if (gameData == null)
+        {
+            Debug.LogWarning("No game data found. Initializing new data.");
+            NewGame();
+        }
+        else
+        {
+            // Gọi hàm xóa vị trí
+            DeletePosition();
+            // Lưu gameData
+            SaveGame();
+        }
+    }
+    public void DeletePosition()
+    {
+        if (gameData != null)
+        {
+            // Xóa giá trị của x và y trong gameData
+            gameData.x = 0;
+            gameData.y = 0;
+            Debug.Log("Deleted gameData position.");
+        }
+        else
+        {
+            Debug.LogWarning("No game data found. Cannot delete position.");
+        }
     }
     private void OnApplicationQuit()
     {
