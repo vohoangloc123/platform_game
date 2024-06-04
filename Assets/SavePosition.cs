@@ -58,4 +58,10 @@ public class SavePosition : MonoBehaviour, IDataPersistence
         gameData.x = positionX;
         gameData.y = positionY;
     }
+    private void OnDestroy()
+    {
+        // Lưu vị trí của người chơi khi thoát scene
+        PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
+        PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
+    }
 }

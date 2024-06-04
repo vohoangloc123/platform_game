@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Boss
   - FinalBoss
+  - Climbable
   layers:
   - Default
   - TransparentFX

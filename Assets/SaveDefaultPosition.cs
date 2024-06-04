@@ -7,7 +7,6 @@ public class SaveDefaultPosition: MonoBehaviour, IDataPersistence
     private float positionX;
     private float positionY;
     public string sceneName;
-
     public Vector2 GetPosition()
     {
         return new Vector2(positionX, positionY);
