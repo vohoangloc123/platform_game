@@ -6,7 +6,6 @@ public class SavePosition : MonoBehaviour, IDataPersistence
 {
     private float positionX;
     private float positionY;
-    public string sceneName;
     private float defaultX;
     private float defaultY;
 
@@ -24,14 +23,7 @@ public class SavePosition : MonoBehaviour, IDataPersistence
     void Start()
     {
         // Khởi tạo vị trí ban đầu
-        if(sceneName.Equals("scene 1"))
-        {
             SetPosition(transform.position);
-        }else if(sceneName.Equals("scene 2"))
-        {
-            positionX = defaultX;
-            positionY = defaultY;
-        }
     }
 
     void Update()

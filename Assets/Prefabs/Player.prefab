@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 8145928146617808281}
   - component: {fileID: 4299164526282520570}
   - component: {fileID: 1163228094695050618}
+  - component: {fileID: 8502195752260504594}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -522,6 +523,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 331b27dba1870594d98acb4f4563895f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbSpeed: 5
+--- !u!114 &8502195752260504594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414888869882211409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b948a56c5865bb4d9e2682acf23cd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8857213324354146563

@@ -9,6 +9,8 @@ TagManager:
   - Boss
   - FinalBoss
   - Climbable
+  - Ship
+  - SwimArea
   layers:
   - Default
   - TransparentFX
