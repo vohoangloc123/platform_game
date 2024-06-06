@@ -11,6 +11,8 @@ TagManager:
   - Climbable
   - Ship
   - SwimArea
+  - Bullet
+  - Shark
   layers:
   - Default
   - TransparentFX
