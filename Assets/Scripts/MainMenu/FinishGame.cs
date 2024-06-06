@@ -19,6 +19,12 @@ public class FinishGame : MonoBehaviour
     {
         DisableMenuButtons();
         Debug.Log("New Game Clicked");
+        // Lưu điểm trước khi bắt đầu game mới
+        // ScoreScript scoreScript = FindObjectOfType<ScoreScript>();
+        // if (scoreScript != null)
+        // {
+        //     scoreScript.SaveScoreToJson();
+        // }
         // Load the game play scene - which will in turn save the game because of
         // OnSceneUnloaded() in the data persistence manager
         DataPersistenceManager.instance.NewGame();

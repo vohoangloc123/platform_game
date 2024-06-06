@@ -15,7 +15,13 @@ public class PlayerHealth : MonoBehaviour,  IDataPersistence
         health -= damage;
         if (health <= 0)
         {
-            SceneManager.LoadScene("EndGame");
+             DataPersistenceManager dataPersistenceManager = DataPersistenceManager.instance;
+            if (dataPersistenceManager != null)
+            {
+                // Lưu dữ liệu trước khi quay lại menu
+                dataPersistenceManager.SaveGame();
+            }
+            SceneManager.LoadScene("ShowScore");
             Destroy(gameObject);
             healthBar.SetMaxHealth(0);
         }
