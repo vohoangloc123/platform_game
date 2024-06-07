@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: c430ef4da76ba4841bc8e0667ce0b660
+  - enabled: 1
+    path: Assets/Scenes/TopScore.unity
+    guid: 4a46698b215cb1647a87a58a9f6fc602
   m_configObjects: {}

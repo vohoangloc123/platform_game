@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3222887235711143996}
   - component: {fileID: 3802266854802335662}
   - component: {fileID: 390296330958592070}
-  - component: {fileID: 2054939775031585596}
   - component: {fileID: 2424556473875424299}
   - component: {fileID: 8125104574386073253}
   - component: {fileID: 8455708868734677937}
+  - component: {fileID: 6255185427235722525}
   m_Layer: 0
   m_Name: SpikeHead
   m_TagString: Enemy
@@ -149,22 +149,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45392424, y: 0.45599258}
   m_EdgeRadius: 0
---- !u!114 &2054939775031585596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8455077137112409380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d38b1983fb7cf43bdd3f1dcdc9b6b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointA: {fileID: 0}
-  pointB: {fileID: 0}
-  speed: 3
-  isAnimation: 0
 --- !u!50 &2424556473875424299
 Rigidbody2D:
   serializedVersion: 4
@@ -228,3 +212,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6255185427235722525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8455077137112409380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46dc4bee71fcba4f90b7f32fe6a40fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  speed: 0
+  isAnimation: 0

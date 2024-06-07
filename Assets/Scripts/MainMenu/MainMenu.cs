@@ -48,6 +48,11 @@ public class MainMenu : MonoBehaviour
             Debug.LogWarning("No saved game data found.");
         }
     }
+     public void OnTopScoreClicked()
+    {
+        DisableMenuButtons();
+        SceneManager.LoadSceneAsync("TopScore");
+    }
 
     private void DisableMenuButtons()
     {

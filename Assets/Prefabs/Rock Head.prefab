@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5306394992885286913}
   - component: {fileID: 2252691144759353106}
   - component: {fileID: 6453937682687767507}
-  - component: {fileID: -250709367201706110}
+  - component: {fileID: 8106371334931257638}
   m_Layer: 6
   m_Name: Rock Head
   m_TagString: Untagged
@@ -181,7 +181,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-250709367201706110
+--- !u!114 &8106371334931257638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,10 +190,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5109981188446746731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d38b1983fb7cf43bdd3f1dcdc9b6b0, type: 3}
+  m_Script: {fileID: 11500000, guid: d46dc4bee71fcba4f90b7f32fe6a40fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  speed: 1
-  isAnimation: 1
+  speed: 6
+  isAnimation: 0
