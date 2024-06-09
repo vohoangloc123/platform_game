@@ -122,9 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   animator: {fileID: 670327954057941404}
-  damage: 1
+  damage: 200
   attackRange: 1
-  knockbackForce: 20
+  knockbackForce: 0
 --- !u!61 &3959304390556765870
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,10 +8,11 @@ public class EnemySwordSwing : MonoBehaviour
     public Animator animator; // Animator của đối tượng
     public int damage = 1; // Sát thương của từng kẻ địch
     public float attackRange = 2f; // Phạm vi tấn công
+    private bool isAttacking = false; 
 
     private GameObject player; // Lưu trữ đối tượng Player
       public float knockbackForce = 5f; // Lực knockback
-
+    public float cooldown = 1;
     void Start()
     {
         // Tìm đối tượng Player một lần khi bắt đầu
@@ -26,11 +27,17 @@ public class EnemySwordSwing : MonoBehaviour
             if (distance <= attackRange)
             {
                 // Nếu ở gần địch, thực hiện tấn công
-                Attack();
+                 StartCoroutine(AttackWithCooldown());
             }
         }
     }
-
+  private IEnumerator AttackWithCooldown()
+    {
+        isAttacking = true;
+        Attack();
+        yield return new WaitForSeconds(cooldown);
+        isAttacking = false;
+    }
     void Attack()
     {
         // Thực hiện hành động tấn công

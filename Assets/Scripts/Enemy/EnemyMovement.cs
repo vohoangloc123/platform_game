@@ -56,6 +56,11 @@ public class EnemyMovement : MonoBehaviour
                     Jump();
                 }
             }
+            else if (distanceToPlayer > followDistance)
+            {
+                 anim.SetFloat("run", 0f);
+            }
+            
         }
     }
 

@@ -5,10 +5,12 @@ public class PlayerClimbing : MonoBehaviour
     public float climbSpeed = 5f;
     private bool isClimbing = false;
     private Rigidbody2D rb;
+    private float originalGravityScale;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        originalGravityScale = rb.gravityScale; // Store the original gravity scale
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -16,7 +18,7 @@ public class PlayerClimbing : MonoBehaviour
         if (other.CompareTag("Climbable"))
         {
             isClimbing = true;
-            rb.gravityScale = 0; // Tắt trọng lực khi leo trèo
+            rb.gravityScale = 0; // Turn off gravity when climbing
         }
     }
 
@@ -25,7 +27,7 @@ public class PlayerClimbing : MonoBehaviour
         if (other.CompareTag("Climbable"))
         {
             isClimbing = false;
-            rb.gravityScale = 1; // Bật lại trọng lực khi ngừng leo
+            rb.gravityScale = originalGravityScale; // Restore original gravity when stopping climb
         }
     }
 

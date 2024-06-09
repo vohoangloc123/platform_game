@@ -23,11 +23,26 @@ public class ChangeSceneOnCollision : MonoBehaviour
 
             // Thiết lập vị trí của người chơi trong scene mới
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
+            // if (player != null)
+            // {
+            //     player.transform.position = new Vector3(playerPosX, playerPosY, player.transform.position.z);
+            //     DataPersistenceManager.instance.SaveGame();
+            //     // Chuyển đến scene có tên được chỉ định
+            //     SceneManager.LoadScene(sceneName);
+            // }
+            // else
+            // {
+            //     Debug.LogError("Player not found in the scene.");
+            // }
+             if (player != null)
             {
-                player.transform.position = new Vector3(playerPosX, playerPosY, player.transform.position.z);
-                DataPersistenceManager.instance.SaveGame();
-                // Chuyển đến scene có tên được chỉ định
+                // Đặt vị trí người chơi thành (0, 0) trước khi lưu
+                Vector3 defaultPosition = new Vector3(0f, 0f, player.transform.position.z);
+                player.transform.position = defaultPosition;
+
+                DataPersistenceManager.instance.SavePlayerPosition(defaultPosition);
+                
+                Debug.Log($"Saved player position: {defaultPosition.x}, {defaultPosition.y}");
                 SceneManager.LoadScene(sceneName);
             }
             else

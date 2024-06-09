@@ -57,6 +57,9 @@ public class ShurikenScript : MonoBehaviour
             }
             // Sau khi xử lý va chạm với Player, hủy viên đạn
             Destroy(gameObject);
+        }else if(collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
         }
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1293609813197512964}
   - component: {fileID: 4443579836631983457}
   - component: {fileID: 2840991763316144203}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: BottomWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a15d9dd93e45144c9842cb4a08b5c9e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

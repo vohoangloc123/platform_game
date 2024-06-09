@@ -8607,37 +8607,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1262052243631686650, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.032
-      objectReference: {fileID: 0}
-    - target: {fileID: 1262052243631686650, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.231
-      objectReference: {fileID: 0}
-    - target: {fileID: 1514904000084963621, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: maxHealth
-      value: 200
+    - target: {fileID: 1784030160387700254, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
+      propertyPath: damage
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2998462734095107337, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.104
-      objectReference: {fileID: 0}
-    - target: {fileID: 2998462734095107337, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.046
-      objectReference: {fileID: 0}
-    - target: {fileID: 3081789065200503673, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 4d307e1bfc6e1f340a13410c808e2be7, type: 2}
-    - target: {fileID: 3126729578897358687, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.998098
+      value: 0.25830445
       objectReference: {fileID: 0}
-    - target: {fileID: 3126729578897358687, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
+    - target: {fileID: 2998462734095107337, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.5156627
+      value: 0.29439425
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998462734095107337, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.103
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998462734095107337, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0471
       objectReference: {fileID: 0}
     - target: {fileID: 3126729578897358687, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8695,38 +8683,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.14629745
       objectReference: {fileID: 0}
-    - target: {fileID: 5550702344223328698, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_Size.x
-      value: 0.20706888
-      objectReference: {fileID: 0}
-    - target: {fileID: 5550702344223328698, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_Size.y
-      value: 0.25026628
-      objectReference: {fileID: 0}
-    - target: {fileID: 5550702344223328698, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.005325245
-      objectReference: {fileID: 0}
-    - target: {fileID: 5550702344223328698, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.023016768
-      objectReference: {fileID: 0}
     - target: {fileID: 8236903629185464398, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
       propertyPath: m_Name
       value: PinkGuy
       objectReference: {fileID: 0}
-    - target: {fileID: 8420700336335578626, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.387
-      objectReference: {fileID: 0}
-    - target: {fileID: 8420700336335578626, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 9195833977894880774, guid: 6e5f478515ee6b7449073c442ad57dbb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

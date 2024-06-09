@@ -50,13 +50,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: Background1
     uniqueID: 3219684311
     locked: 0
-  - name: BackGround
+  - name: Background2
     uniqueID: 687587843
     locked: 0
-  - name: Ground
+  - name: Background3
     uniqueID: 1040996839
     locked: 0
   - name: Object
@@ -67,6 +67,12 @@ TagManager:
     locked: 0
   - name: Object2
     uniqueID: 2567888363
+    locked: 0
+  - name: Enemy1
+    uniqueID: 587823401
+    locked: 0
+  - name: Enemy2
+    uniqueID: 3413360873
     locked: 0
   - name: Player
     uniqueID: 1107949291

@@ -1721,6 +1721,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: ShowScore
       objectReference: {fileID: 0}
+    - target: {fileID: 1430400918933264798, guid: db757e3fb51d0a2458fdad9c69776f8c, type: 3}
+      propertyPath: enemyNumber
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 7740574091262956132, guid: db757e3fb51d0a2458fdad9c69776f8c, type: 3}
       propertyPath: m_Name
       value: EnemyText
@@ -3155,7 +3159,7 @@ Transform:
   m_GameObject: {fileID: 1434606524}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.733682, y: 1.9242914, z: -10}
+  m_LocalPosition: {x: 9.381754, y: 1.9242914, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4058,7 +4062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2641b4b5b05eaa4da4daa2bdb917751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initializeDataIfNull: 0
+  initializeDataIfNull: 1
   fileName: data.json
   useEncryption: 0
 --- !u!1001 &1753559507

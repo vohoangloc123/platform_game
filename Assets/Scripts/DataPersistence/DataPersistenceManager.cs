@@ -63,15 +63,6 @@ public class DataPersistenceManager : MonoBehaviour
         // Giả sử GameData là một class hoặc struct hợp lệ
         this.gameData = new GameData();
     }
-    public void DefautPosition()
-    {
-        // Tạo một phiên bản mới của GameData
-        this.gameData = new GameData();
-        // Gán giá trị cho x và y
-        this.gameData.x = 0.0f;
-        this.gameData.y = 0.0f;
-        Debug.Log("Default positon");
-    }
     public void LoadGame()
     {
         // TODO: Tải dữ liệu đã lưu từ tệp bằng cách sử dụng trình xử lý dữ liệu
@@ -96,10 +87,30 @@ public class DataPersistenceManager : MonoBehaviour
         }
         Debug.Log("Đã tải x = " + gameData.x+ " từ dữ liệu đã lưu");  // Đã sửa dấu ngoặc kép
         Debug.Log("Đã tải y = " + gameData.y+ " từ dữ liệu đã lưu");  // Đã sửa dấu ngoặc kép
-
-    
+        //new
+        // Khôi phục vị trí của người chơi
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            player.transform.position = new Vector3(this.gameData.x, this.gameData.y, player.transform.position.z);
+            Debug.Log($"Player position set to: {this.gameData.x}, {this.gameData.y}");
+        }
+        else
+        {
+            Debug.LogWarning("Player object not found to set position.");
+        }
     }
+    public void SavePlayerPosition(Vector3 position)
+    {
+        if (this.gameData == null)
+        {
+            this.gameData = new GameData();
+        }
 
+        this.gameData.x = position.x;
+        this.gameData.y = position.y;
+        SaveGame();
+    }
     public void SaveGame()
     {
         //if we dont have any data to save, log a warning here
