@@ -35,9 +35,6 @@ public class EnemyLeft : MonoBehaviour
         if (enemyNumber <= 0)
         {
             DataPersistenceManager.instance.SaveGame();
-    
-            SceneManager.LoadScene(sceneName);
-
         }
     }
     void Update()
@@ -70,7 +67,7 @@ public class EnemyLeft : MonoBehaviour
             DataPersistenceManager.instance.SaveGame();
 
             // Invoke("LoadSceneAfterDelay", 2f); // Gọi hàm sau 2 giây
-            SceneManager.LoadScene(sceneName);
+            // SceneManager.LoadScene(sceneName);
         }
 
         enemyText.text = "Enemy Left: " + enemyNumber;

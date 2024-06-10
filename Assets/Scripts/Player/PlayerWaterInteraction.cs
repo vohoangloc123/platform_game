@@ -32,6 +32,7 @@ public class PlayerWaterInteraction : MonoBehaviour
             isInWater = false;
             // Khôi phục gravity scale khi ra khỏi nước
             playerRigidbody.gravityScale = originalGravityScale;
+            // playerRigidbody.gravityScale=3;
             Debug.Log("Player exited water.");
         }
     }

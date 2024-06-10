@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -239169647
-  m_SortingLayer: 9
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 1287199313, guid: 24f2a9890c0946e479241675e0d62a0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -125,6 +125,7 @@ MonoBehaviour:
   damage: 200
   attackRange: 1
   knockbackForce: 0
+  cooldown: 1
 --- !u!61 &3959304390556765870
 BoxCollider2D:
   m_ObjectHideFlags: 0
