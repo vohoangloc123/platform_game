@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8106371334931257638}
   m_Layer: 6
   m_Name: Rock Head
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,5 +195,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  speed: 5
+  speed: 3
   isAnimation: 0
