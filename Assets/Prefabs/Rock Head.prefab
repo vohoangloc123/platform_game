@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4742312616526978248}
-  - component: {fileID: 9036976106381835909}
   - component: {fileID: 5306394992885286913}
   - component: {fileID: 2252691144759353106}
   - component: {fileID: 6453937682687767507}
-  - component: {fileID: 8106371334931257638}
+  - component: {fileID: -474858886543383550}
+  - component: {fileID: -4367040700463299278}
   m_Layer: 6
   m_Name: Rock Head
   m_TagString: Ground
@@ -31,38 +31,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 83.2378, y: 8.1866, z: 0}
-  m_LocalScale: {x: -3.0601375, y: 2.8819158, z: 1}
+  m_LocalScale: {x: -5.8160973, y: 4.8580456, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &9036976106381835909
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5109981188446746731}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &5306394992885286913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +154,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8106371334931257638
+--- !u!114 &-474858886543383550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,10 +163,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 5109981188446746731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d46dc4bee71fcba4f90b7f32fe6a40fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ee46fb1cb6cf014da34ee73b905679f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  speed: 3
-  isAnimation: 0
+--- !u!50 &-4367040700463299278
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5109981188446746731}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

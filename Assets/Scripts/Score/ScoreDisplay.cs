@@ -37,7 +37,7 @@ public class ScoreDisplay : MonoBehaviour
                 string displayText = "Top 10 Scores:\n";
                 foreach (ScoreData scoreData in scoreList.scores)
                 {
-                    displayText += "STT: " + scoreData.STT + " - Score: " + scoreData.score + "\n";
+                    displayText +=scoreData.STT + " - Score: " + scoreData.score + "\n";
                 }
 
                 scoreText.text = displayText;

@@ -13,6 +13,7 @@ public class EnemySwordSwing : MonoBehaviour
     private GameObject player; // Lưu trữ đối tượng Player
       public float knockbackForce = 5f; // Lực knockback
     public float cooldown = 1;
+    public AudioSource bladeSound;
     void Start()
     {
         // Tìm đối tượng Player một lần khi bắt đầu
@@ -45,6 +46,7 @@ public class EnemySwordSwing : MonoBehaviour
         // Kích hoạt Animator để thực hiện Animation Attack
         if (animator != null)
         {
+            PlaySound();
             animator.SetTrigger("Attack");
         }
         // Gọi hàm tấn công của PlayerHealth
@@ -67,6 +69,18 @@ public class EnemySwordSwing : MonoBehaviour
                 Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
                 playerRb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
             }
+        }
+    }
+     public void PlaySound()
+    {
+        if(bladeSound != null)
+        {
+            // Phát âm thanh
+            bladeSound.Play();
+        }
+        else
+        {
+            Debug.LogError("AudioSource reference is null!");
         }
     }
     

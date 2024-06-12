@@ -11,12 +11,12 @@ public class ShurikenScript : MonoBehaviour
     public int damage;
     public float rotationSpeed = 100f; // Tốc độ quay của viên đạn
     private bool isRotating = true; // Biến để kiểm tra liệu viên đạn có nên xoay hay không
-
+    public AudioSource shurikenSound;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Vector2 randomDirection;
-
+        PlaySound();
         // Tạo hướng di chuyển ban đầu
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
@@ -31,6 +31,7 @@ public class ShurikenScript : MonoBehaviour
             float randomAngle = Random.Range(0f, 360f);
             randomDirection = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad));
             rb.velocity = randomDirection.normalized * force;
+            
         }
 
         // Bắt đầu coroutine để xoay viên đạn liên tục
@@ -70,6 +71,18 @@ public class ShurikenScript : MonoBehaviour
             // Xoay viên đạn 360 độ liên tục
             transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
             yield return null;
+        }
+    }
+    public void PlaySound()
+    {
+        if(shurikenSound != null)
+        {
+            // Phát âm thanh
+            shurikenSound.Play();
+        }
+        else
+        {
+            Debug.LogError("AudioSource reference is null!");
         }
     }
 }
