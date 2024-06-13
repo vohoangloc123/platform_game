@@ -526,7 +526,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 968598161110364105, guid: 8f46cc333423a024990e7c98e44c82c4, type: 3}
       propertyPath: useEncryption
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 968598161110364105, guid: 8f46cc333423a024990e7c98e44c82c4, type: 3}
+      propertyPath: initializeDataIfNull
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2573931175135520336, guid: 8f46cc333423a024990e7c98e44c82c4, type: 3}
       propertyPath: m_RootOrder

@@ -83,3 +83,12 @@ TagManager:
   - name: Shoot
     uniqueID: 4055797649
     locked: 0
+  - name: Icon1
+    uniqueID: 3814850245
+    locked: 0
+  - name: Icon2
+    uniqueID: 1801941769
+    locked: 0
+  - name: Icon3
+    uniqueID: 345406023
+    locked: 0
