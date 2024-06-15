@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 1163228094695050618}
   - component: {fileID: 8502195752260504594}
   - component: {fileID: 4369432516594651408}
+  - component: {fileID: 3733047968743784188}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -701,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696856370785960429242ab3897abd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10000
+  health: 1000
   healthBar: {fileID: 0}
 --- !u!114 &5709400985721915993
 MonoBehaviour:
@@ -889,6 +890,22 @@ MonoBehaviour:
   cooldownTime: 10
   cooldownText: {fileID: 0}
   healSkill: {fileID: 687895070842267413}
+--- !u!114 &3733047968743784188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414888869882211409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71aebe2a54b1ae748826fba6e02408dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragonPrefab: {fileID: 3617450125861964643, guid: d7b546032663e2a4a95309a69f16a78f, type: 3}
+  player: {fileID: 4414888869882211409}
+  dragonCooldownTime: 10
+  cooldownText: {fileID: 0}
 --- !u!1 &4530755413518958972
 GameObject:
   m_ObjectHideFlags: 0
