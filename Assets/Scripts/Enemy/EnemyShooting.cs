@@ -31,14 +31,13 @@ public class EnemyShooting : MonoBehaviour
             if (distance < throwDistance)
             {
                 timer += Time.deltaTime;
-                Debug.Log("Timer: " + timer);
+            
 
                 if (timer > 2)
                 {
                     timer = 0;
                     shoot();
                     weaponObject.SetActive(false);
-                    Debug.Log("Weapon shown");
                     StartCoroutine(HideWeapon());
                 }
             }
@@ -64,7 +63,6 @@ public class EnemyShooting : MonoBehaviour
         if (weaponObject != null)
         {
             weaponObject.SetActive(true);
-            Debug.Log("Weapon hidden");
         }
         else
         {

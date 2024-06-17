@@ -27,6 +27,7 @@ public class DashMovementPlayer : MonoBehaviour
     //new
     public bool flippedLeft;
     public bool facingRight = true;
+    public AudioSource audioSource;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -63,6 +64,7 @@ public class DashMovementPlayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
+            audioSource.Play();
             StartCoroutine(Dash());
         }
         //new
@@ -75,18 +77,9 @@ public class DashMovementPlayer : MonoBehaviour
         else if(horizontal >0)
         {
             facingRight = true;
-            // Flip(true);
-            // spriteRenderer.flipX = false;
         }
         Flip();
     }
-    // public void LoadData(GameData gameData)
-    // {
-    //     transform.position=gameData.playerPosition;
-    // }public void SaveData(ref GameData gameData)
-    // {
-    //     gameData.playerPosition= transform.position;
-    // }
 
     private void FixedUpdate()
     {

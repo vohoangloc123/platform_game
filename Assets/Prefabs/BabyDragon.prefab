@@ -1,5 +1,133 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1958287174591553014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7574785585058790421}
+  - component: {fileID: 7305838725715578440}
+  m_Layer: 0
+  m_Name: Dragon Split Fire Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7574785585058790421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958287174591553014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5415023625208211815}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &7305838725715578440
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958287174591553014}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: eb0b6f6133632914c82088ced48f75e8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2485620989729665822
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +160,8 @@ Transform:
   m_LocalPosition: {x: 4.5145, y: -1.4399, z: 71.96497}
   m_LocalScale: {x: 0.8980888, y: 0.5084722, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7574785585058790421}
   m_Father: {fileID: 8752657199788508753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &253731160481332562
@@ -131,26 +260,28 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 3.2105262, y: -1.4473684}
-      - {x: 2.4736843, y: -0.55263156}
-      - {x: 2.1052632, y: -0.71052635}
-      - {x: 1.4736842, y: 0.078947365}
-      - {x: 1, y: 0.55263156}
-      - {x: 0.47368422, y: 0.4473684}
-      - {x: -0.68421054, y: 1.2894737}
-      - {x: -1.7368422, y: 2.131579}
-      - {x: -2.631579, y: 2.7105262}
+    - - {x: 4.1369357, y: -3.1459134}
+      - {x: 4.2681, y: -2.1898787}
+      - {x: 4.0516496, y: -0.76513237}
+      - {x: 3.5878634, y: -0.19408256}
+      - {x: 2.744629, y: 0.8309967}
+      - {x: 1.6256987, y: 2.1094773}
+      - {x: 0.42903, y: 3.493399}
+      - {x: -1.5344231, y: 3.8338253}
+      - {x: -2.4302003, y: 3.6956408}
+      - {x: -2.9970345, y: 3.7746668}
       - {x: -3.2631578, y: 2.7105262}
       - {x: -3.2631578, y: 2.131579}
-      - {x: -3.1578948, y: 1.8157895}
-      - {x: -1.8947369, y: 0.65789473}
-      - {x: -0.31578946, y: -0.9736842}
-      - {x: -0.05263158, y: -1.5526316}
-      - {x: 0.47368422, y: -2.0263157}
-      - {x: 1.5263158, y: -2.6578948}
-      - {x: 2.1578948, y: -2.6578948}
-      - {x: 3.1052632, y: -2.0789473}
-      - {x: 3.2105262, y: -1.8157895}
+      - {x: -3.3466768, y: 1.8541876}
+      - {x: -3.199194, y: 1.2171285}
+      - {x: -2.1307144, y: -0.11006755}
+      - {x: -0.62256044, y: -1.7416465}
+      - {x: 0.04175952, y: -2.4357886}
+      - {x: 0.6624664, y: -3.1014628}
+      - {x: 1.8330863, y: -4.0786247}
+      - {x: 2.9951081, y: -4.5728383}
+      - {x: 3.4927616, y: -4.285825}
+      - {x: 3.9137156, y: -3.7457967}
   m_UseDelaunayMesh: 0
 --- !u!95 &7172447707814308872
 Animator:
@@ -185,8 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100fdd6a58b95ef4cac0f656a9c08764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerSecond: 100
-  durationInSeconds: 3
+  damagePerSecond: 50
 --- !u!1 &3617450125861964643
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5415023625208211815}
+  - {fileID: 4933942755331322763}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6237082323837134913
@@ -312,10 +443,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   minDistance: 2
+  jumpHeight: 1
+  groundCheck: {fileID: 4933942755331322763}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  groundDistance: 5
+    m_Bits: 64
+  distanceToEnemy: 10
 --- !u!114 &3531636998400729630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,3 +536,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8055916, y: 1.5273843}
   m_EdgeRadius: 0
+--- !u!1 &3828627993038466067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4933942755331322763}
+  m_Layer: 0
+  m_Name: Check Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4933942755331322763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3828627993038466067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: -1.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8752657199788508753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
