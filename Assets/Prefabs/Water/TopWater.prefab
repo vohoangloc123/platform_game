@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2961060570106225571}
   m_Layer: 4
   m_Name: TopWater
-  m_TagString: Untagged
+  m_TagString: Climbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

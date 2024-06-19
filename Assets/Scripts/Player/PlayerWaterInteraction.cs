@@ -7,6 +7,7 @@ public class PlayerWaterInteraction : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     private float originalGravityScale;
     private float swimGravityScale = 0.5f;
+    private int waterCounter = 0; // Bộ đếm để theo dõi số lượng vùng nước
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerWaterInteraction : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Water"))
         {
+            waterCounter++;
             isInWater = true;
             // Thay đổi gravity scale khi vào nước
             playerRigidbody.gravityScale = swimGravityScale;
@@ -29,11 +31,14 @@ public class PlayerWaterInteraction : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Water"))
         {
-            isInWater = false;
-            // Khôi phục gravity scale khi ra khỏi nước
-            playerRigidbody.gravityScale = originalGravityScale;
-            // playerRigidbody.gravityScale=3;
-            Debug.Log("Player exited water.");
+            waterCounter--;
+            if (waterCounter <= 0)
+            {
+                isInWater = false;
+                // Khôi phục gravity scale khi ra khỏi nước
+                playerRigidbody.gravityScale = originalGravityScale;
+                Debug.Log("Player exited water.");
+            }
         }
     }
 
@@ -44,6 +49,11 @@ public class PlayerWaterInteraction : MonoBehaviour
         if (isInWater && Input.GetKey(KeyCode.Space))
         {
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 5f); // Điều chỉnh tốc độ bơi lên
+        }
+        else
+        {
+            // Đảm bảo trọng lực được khôi phục nếu không đang trong nước (kiểm tra an toàn)
+            playerRigidbody.gravityScale = originalGravityScale;
         }
     }
 }
