@@ -29,9 +29,9 @@ public class ScoreScript : MonoBehaviour, IDataPersistence
         score = GetComponent<Text>();
         if (score == null)
         {
-            Debug.LogError("TextMeshProUGUI component is missing. Please attach a TextMeshProUGUI component to the GameObject.");
+            Debug.LogError("Text component is missing. Please attach a Text component to the GameObject.");
+            return;
         }
-
         // Kiểm tra nếu đang ở trong scene FinishGame
         isFinishGameScene = (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "FinishGame");
         if (isFinishGameScene)
@@ -39,6 +39,7 @@ public class ScoreScript : MonoBehaviour, IDataPersistence
             SaveScoreToJson();
             scoreValue = 0;
         }
+          score.text = "Score: " + scoreValue;
     }
 
     // Update is called once per frame
@@ -62,55 +63,6 @@ public class ScoreScript : MonoBehaviour, IDataPersistence
     {
         gameData.score = scoreValue;
     }
-    
-    //  public void SaveScoreToJson()
-    // {
-    //     string path = Path.Combine(Application.persistentDataPath, "scores.json");
-    //     ScoreList scoreList;
-
-    //     if (File.Exists(path))
-    //     {
-    //         string json = File.ReadAllText(path);
-    //         scoreList = JsonUtility.FromJson<ScoreList>(json);
-    //     }
-    //     else
-    //     {
-    //         scoreList = new ScoreList();
-    //     }
-
-    //     // Tạo đối tượng ScoreData mới
-    //     ScoreData newScoreData = new ScoreData { score = scoreValue };
-
-    //     // Kiểm tra xem có điểm cao hơn trong danh sách không
-    //     bool highScoreReplaced = false;
-    //     for (int i = 0; i < scoreList.scores.Count; i++)
-    //     {
-    //         if (scoreValue > scoreList.scores[i].score)
-    //         {
-    //             // Thay thế điểm cao nhất và lùi các điểm khác xuống
-    //             scoreList.scores.Insert(i, newScoreData);
-    //             highScoreReplaced = true;
-    //             break;
-    //         }
-    //     }
-
-    //     if (!highScoreReplaced)
-    //     {
-    //         scoreList.scores.Add(newScoreData);
-    //     }
-
-    //     // Cập nhật STT cho tất cả điểm
-    //     for (int i = 0; i < scoreList.scores.Count; i++)
-    //     {
-    //         scoreList.scores[i].STT = i + 1;
-    //     }
-
-    //     // Lưu danh sách điểm vào file JSON
-    //     string updatedJson = JsonUtility.ToJson(scoreList, true);
-    //     File.WriteAllText(path, updatedJson);
-
-    //     Debug.Log("Score saved to " + path);
-    // }
       public void SaveScoreToJson()
     {
         string path = Path.Combine(Application.persistentDataPath, "scores.json");

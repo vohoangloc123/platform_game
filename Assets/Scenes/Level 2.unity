@@ -20804,6 +20804,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652231502038223167, guid: d687abece22d11248829125c662f4c6e, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652231502038223167, guid: d687abece22d11248829125c662f4c6e, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 5293698900777993938, guid: d687abece22d11248829125c662f4c6e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -22566,7 +22574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &525040839
 Transform:
   m_ObjectHideFlags: 0
