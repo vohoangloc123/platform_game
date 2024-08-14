@@ -1,5 +1,3 @@
-
-
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -10,36 +8,25 @@ public class CharacterMovement : MonoBehaviour
     public float moveSpeed = 4.5f;
     public float minDistance = 2.0f;
     public float jumpHeight = 2.0f; // Chiều cao của cú bay lên khi chạm vào Ground
-    public Transform groundCheck;
-    private bool isGrounded = false;
     private bool isFacingRight = true;
-    private Vector3 originalScale;
-    private Vector2 boxSize = new Vector2(1f, 0.2f);
-    public LayerMask groundLayer;
     public float distanceToEnemy = 10f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        originalScale = transform.localScale;
     }
 
     void Update()
     {
         FindEnemies(); // Tìm kẻ địch mỗi frame
         MoveTowardsTarget();
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0f, groundLayer);
-
-        if (isGrounded)
-        {
-            FlyUp();
-        }
     }
 
     void FindEnemies()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
+
     void MoveTowardsTarget()
     {
         GameObject nearestTarget = null;
@@ -82,23 +69,6 @@ public class CharacterMovement : MonoBehaviour
         transform.position = new Vector2(transform.position.x, transform.position.y + jumpHeight);
     }
 
-    GameObject GetNearestEnemy()
-    {
-        GameObject nearestEnemy = null;
-        float closestDistance = Mathf.Infinity;
-
-        foreach (GameObject enemy in enemies)
-        {
-            float distance = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                nearestEnemy = enemy;
-            }
-        }
-
-        return nearestEnemy;
-    }
     void MoveTowards(Vector3 targetPosition)
     {
         Vector3 direction = targetPosition - transform.position;

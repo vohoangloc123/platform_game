@@ -38001,7 +38001,7 @@ Transform:
   m_GameObject: {fileID: 1834099158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 156.21, y: -0.33, z: 0.08944919}
+  m_LocalPosition: {x: 153.71, y: -0.33, z: 0.08944919}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40126,6 +40126,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6098912226393778214, guid: aef34b22f19cdc141b4ba1ef10602abc, type: 3}
+      propertyPath: cooldownText
+      value: 
+      objectReference: {fileID: 2059392915}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40426,6 +40430,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2059392915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3774906637159264804, guid: d687abece22d11248829125c662f4c6e, type: 3}
+  m_PrefabInstance: {fileID: 332645469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2060572036
 PrefabInstance:
   m_ObjectHideFlags: 0
